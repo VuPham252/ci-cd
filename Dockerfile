@@ -12,7 +12,7 @@ RUN ./mvnw clean package -DskipTests
 FROM eclipse-temurin:21-jre AS runtime
 
 WORKDIR /app
-COPY --from=build /app/target/my-app.jar /app/app.jar
+COPY --from=build /app/target/demo1-0.0.1-SNAPSHOT.jar /app/ci-cd.jar
 
 # Run the application
-ENTRYPOINT ["java", "-jar", "/app/app.jar"]
+ENTRYPOINT ["java", "-jar", "/app/ci-cd.jar"]
