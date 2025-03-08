@@ -28,7 +28,7 @@ jobs:
       - name: Run SonarQube Analysis
         uses: sonarsource/sonarqube-scan-action@master
         env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} //Sonar Token generated
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: https://sonarcloud.io
 #        env:
 #          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
