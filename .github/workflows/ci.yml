@@ -34,6 +34,7 @@ jobs:
           args: >
             -Dsonar.projectKey=VuPham252_ci-cd
             -Dsonar.organization=vupham252
+            -Dsonar.java.binaries=target/classes
 #        env:
 #          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 #        run: mvn sonar:sonar -Dsonar.projectKey=ci-cd -Dsonar.organization=vupham252 -Dsonar.host.url=https://sonarcloud.io
