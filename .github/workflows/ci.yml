@@ -26,9 +26,13 @@ jobs:
         run: mvn clean verify
 
       - name: Run SonarQube Analysis
+        uses: sonarsource/sonarqube-scan-action@master
         env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn sonar:sonar -Dsonar.projectKey=my-project -Dsonar.organization=my-org -Dsonar.host.url=https://sonarcloud.io
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} //Sonar Token generated
+          SONAR_HOST_URL: https://sonarcloud.io
+#        env:
+#          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+#        run: mvn sonar:sonar -Dsonar.projectKey=ci-cd -Dsonar.organization=vupham252 -Dsonar.host.url=https://sonarcloud.io
 
 #      - name: Run Trivy Security Scan
 #        uses: aquasecurity/trivy-action@master
